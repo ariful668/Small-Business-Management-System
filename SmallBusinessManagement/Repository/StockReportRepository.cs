@@ -11,11 +11,13 @@ namespace SmallBusinessManagement.Repository
 {
     public class StockReportRepository
     {
+        string connectionString = @"Server = DESKTOP-IL4U8GL; Database = SmallBusiness;
+                Integrated Security = true";
         public DataTable Search(Purchase purchase,Product product,Category category)
         {
 
             //Connection
-            string connectionString = @"Server=DESKTOP-8RCCAHG; Database=SmallBusiness; Integrated Security=True";
+           
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 

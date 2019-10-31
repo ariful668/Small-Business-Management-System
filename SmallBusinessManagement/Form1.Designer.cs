@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.productsButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.stockButton = new System.Windows.Forms.Button();
             this.salesButton = new System.Windows.Forms.Button();
@@ -54,7 +55,8 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.panelLeft = new System.Windows.Forms.Button();
-            this.productsButton = new System.Windows.Forms.Button();
+            this.salesReportButton = new System.Windows.Forms.Button();
+            this.purchaseReportButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -64,8 +66,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.purchaseReportButton);
+            this.panel1.Controls.Add(this.salesReportButton);
             this.panel1.Controls.Add(this.productsButton);
-            this.panel1.Controls.Add(this.exitButton);
             this.panel1.Controls.Add(this.stockButton);
             this.panel1.Controls.Add(this.salesButton);
             this.panel1.Controls.Add(this.purchaseButton);
@@ -80,6 +83,23 @@
             this.panel1.Size = new System.Drawing.Size(166, 519);
             this.panel1.TabIndex = 0;
             // 
+            // productsButton
+            // 
+            this.productsButton.BackColor = System.Drawing.Color.Teal;
+            this.productsButton.FlatAppearance.BorderSize = 0;
+            this.productsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.productsButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productsButton.ForeColor = System.Drawing.Color.White;
+            this.productsButton.Location = new System.Drawing.Point(0, 174);
+            this.productsButton.Name = "productsButton";
+            this.productsButton.Size = new System.Drawing.Size(166, 27);
+            this.productsButton.TabIndex = 8;
+            this.productsButton.Text = "Products";
+            this.productsButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.productsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.productsButton.UseVisualStyleBackColor = false;
+            this.productsButton.Click += new System.EventHandler(this.ProductsButton_Click);
+            // 
             // exitButton
             // 
             this.exitButton.BackColor = System.Drawing.Color.Teal;
@@ -87,7 +107,7 @@
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.Color.White;
-            this.exitButton.Location = new System.Drawing.Point(-1, 490);
+            this.exitButton.Location = new System.Drawing.Point(398, 172);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(167, 29);
             this.exitButton.TabIndex = 7;
@@ -104,7 +124,7 @@
             this.stockButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stockButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stockButton.ForeColor = System.Drawing.Color.White;
-            this.stockButton.Location = new System.Drawing.Point(-1, 410);
+            this.stockButton.Location = new System.Drawing.Point(0, 408);
             this.stockButton.Name = "stockButton";
             this.stockButton.Size = new System.Drawing.Size(167, 29);
             this.stockButton.TabIndex = 6;
@@ -121,7 +141,7 @@
             this.salesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.salesButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salesButton.ForeColor = System.Drawing.Color.White;
-            this.salesButton.Location = new System.Drawing.Point(-1, 362);
+            this.salesButton.Location = new System.Drawing.Point(-1, 356);
             this.salesButton.Name = "salesButton";
             this.salesButton.Size = new System.Drawing.Size(167, 29);
             this.salesButton.TabIndex = 5;
@@ -241,6 +261,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
             this.panel2.Controls.Add(this.checkBox4);
             this.panel2.Controls.Add(this.checkBox3);
+            this.panel2.Controls.Add(this.exitButton);
             this.panel2.Controls.Add(this.checkBox2);
             this.panel2.Controls.Add(this.checkBox1);
             this.panel2.Controls.Add(this.pictureBox2);
@@ -391,22 +412,39 @@
             this.panelLeft.UseVisualStyleBackColor = false;
             this.panelLeft.Click += new System.EventHandler(this.PanelLeft_Click);
             // 
-            // productsButton
+            // salesReportButton
             // 
-            this.productsButton.BackColor = System.Drawing.Color.Teal;
-            this.productsButton.FlatAppearance.BorderSize = 0;
-            this.productsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.productsButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productsButton.ForeColor = System.Drawing.Color.White;
-            this.productsButton.Location = new System.Drawing.Point(0, 174);
-            this.productsButton.Name = "productsButton";
-            this.productsButton.Size = new System.Drawing.Size(166, 27);
-            this.productsButton.TabIndex = 8;
-            this.productsButton.Text = "Products";
-            this.productsButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.productsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.productsButton.UseVisualStyleBackColor = false;
-            this.productsButton.Click += new System.EventHandler(this.ProductsButton_Click);
+            this.salesReportButton.BackColor = System.Drawing.Color.Teal;
+            this.salesReportButton.FlatAppearance.BorderSize = 0;
+            this.salesReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesReportButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesReportButton.ForeColor = System.Drawing.Color.White;
+            this.salesReportButton.Location = new System.Drawing.Point(0, 445);
+            this.salesReportButton.Name = "salesReportButton";
+            this.salesReportButton.Size = new System.Drawing.Size(167, 29);
+            this.salesReportButton.TabIndex = 9;
+            this.salesReportButton.Text = "SalesReport";
+            this.salesReportButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.salesReportButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.salesReportButton.UseVisualStyleBackColor = false;
+            this.salesReportButton.Click += new System.EventHandler(this.salesReportButton_Click);
+            // 
+            // purchaseReportButton
+            // 
+            this.purchaseReportButton.BackColor = System.Drawing.Color.Teal;
+            this.purchaseReportButton.FlatAppearance.BorderSize = 0;
+            this.purchaseReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.purchaseReportButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.purchaseReportButton.ForeColor = System.Drawing.Color.White;
+            this.purchaseReportButton.Location = new System.Drawing.Point(-4, 487);
+            this.purchaseReportButton.Name = "purchaseReportButton";
+            this.purchaseReportButton.Size = new System.Drawing.Size(167, 29);
+            this.purchaseReportButton.TabIndex = 10;
+            this.purchaseReportButton.Text = "PurchaseReport";
+            this.purchaseReportButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.purchaseReportButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.purchaseReportButton.UseVisualStyleBackColor = false;
+            this.purchaseReportButton.Click += new System.EventHandler(this.purchaseReportButton_Click);
             // 
             // Form1
             // 
@@ -468,6 +506,8 @@
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button panelLeft;
         private System.Windows.Forms.Button productsButton;
+        private System.Windows.Forms.Button salesReportButton;
+        private System.Windows.Forms.Button purchaseReportButton;
     }
 }
 

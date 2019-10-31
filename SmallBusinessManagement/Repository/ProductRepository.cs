@@ -12,8 +12,9 @@ namespace SmallBusinessManagement.Repository
 {
     public class ProductRepository
     {
-        string connectionString = @"Server = DESKTOP-8RCCAHG; Database = SmallBusiness;
+        string connectionString = @"Server = DESKTOP-IL4U8GL; Database = SmallBusiness;
                 Integrated Security = true";
+
 
         public List<Product> LoadProducts()
         {

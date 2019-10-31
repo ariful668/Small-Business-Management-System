@@ -94,5 +94,21 @@ namespace DarkDemo
 
         }
 
+        private void salesReportButton_Click(object sender, EventArgs e)
+        {
+            panelLeft.Height = salesReportButton.Height;
+            panelLeft.Top = salesReportButton.Top;
+            ReportOnSalesUi Check = new ReportOnSalesUi();
+            Check.Show();
+        }
+
+        private void purchaseReportButton_Click(object sender, EventArgs e)
+        {
+            panelLeft.Height = purchaseReportButton.Height;
+            panelLeft.Top = purchaseReportButton.Top;
+            ReportOnPurchaseUi Check = new ReportOnPurchaseUi();
+            Check.Show();
+
+        }
     }
 }

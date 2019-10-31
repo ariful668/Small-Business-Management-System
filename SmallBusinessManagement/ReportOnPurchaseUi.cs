@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SmallBusinessManagement.Model;
+using SmallBusinessManagement.ViewModel;
 using SmallBusinessManagement.BLL;
 
 
@@ -24,13 +25,35 @@ namespace SmallBusinessManagement
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            Purchase purchase = new Purchase();
+            PurchaseReportingView purchaserepot = new PurchaseReportingView();
 
-            purchase.Date1 = startDateTimePicker.Value;
-            purchase.Date2 = endDateTimePicker.Value;
+            if (dateTimePicker1.Text == " ")
+            {
+                MessageBox.Show("please insert start date");
+                return;
 
-            showDataGridView.DataSource = _reportOnPurchaseManager.Search(purchase);
-            
+            }
+            if (dateTimePicker2.Text == " ")
+            {
+                MessageBox.Show("please insert end date");
+                return;
+
+            }
+            string Date;
+            string Date2;
+            Date = dateTimePicker1.Text;
+            Date2 = dateTimePicker2.Text;
+
+
+            showDataGridView.DataSource = _reportOnPurchaseManager.SearchValue(dateTimePicker1.Text, dateTimePicker2.Text);
+
+        }
+
+        private void ReportOnPurchaseUi_Load(object sender, EventArgs e)
+        {
+            PurchaseReportingView purchaserepot = new PurchaseReportingView();
+            showDataGridView.DataSource = _reportOnPurchaseManager.Display(purchaserepot);
+
         }
     }
 }

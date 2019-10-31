@@ -133,6 +133,8 @@
       <DependentUpon>SupplierUi.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\ProductView.cs" />
+    <Compile Include="ViewModel\PurchaseReportingView.cs" />
+    <Compile Include="ViewModel\SalesReportingView.cs" />
     <EmbeddedResource Include="CategoryUi.resx">
       <DependentUpon>CategoryUi.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +176,8 @@
     </EmbeddedResource>
     <None Include="Properties\DataSources\SmallBusinessManagement.Model.Category1.datasource" />
     <None Include="Properties\DataSources\SmallBusinessManagement.Model.Product.datasource" />
+    <None Include="Properties\DataSources\SmallBusinessManagement.ViewModel.PurchaseReportingView.datasource" />
+    <None Include="Properties\DataSources\SmallBusinessManagement.ViewModel.SalesReportingView.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

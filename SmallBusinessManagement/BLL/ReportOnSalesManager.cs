@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using SmallBusinessManagement.Model;
+using SmallBusinessManagement.ViewModel;
 using SmallBusinessManagement.Repository;
 
 namespace SmallBusinessManagement.BLL
@@ -13,9 +14,13 @@ namespace SmallBusinessManagement.BLL
     {
         ReportOnSalesRepository _reportOnSalesRepository = new ReportOnSalesRepository();
 
-        public DataTable Search(Sales sales)
+        public List<SalesReportingView> SearchValue(string Date, string Date2)
         {
-            return _reportOnSalesRepository.Search(sales);
+            return _reportOnSalesRepository.SearchValue(Date, Date2);
+        }
+        public List<SalesReportingView> Display(SalesReportingView salesReportingView)
+        {
+            return _reportOnSalesRepository.Display(salesReportingView);
         }
     }
 }

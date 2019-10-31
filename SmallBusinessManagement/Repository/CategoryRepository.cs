@@ -13,7 +13,7 @@ namespace SmallBusinessManagement.Repository
 {
     class CategoryRepository
     {
-        string connectionString = @"Server = DESKTOP-8RCCAHG; Database = SmallBusiness;
+        string connectionString = @"Server = DESKTOP-IL4U8GL; Database = SmallBusiness;
                 Integrated Security = true";
 
         public bool AddCategory(Category category)

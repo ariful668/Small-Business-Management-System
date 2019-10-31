@@ -12,13 +12,16 @@ namespace SmallBusinessManagement.Repository
 {
     public class CustomerRepository
     {
+        string connectionString = @"Server = DESKTOP-IL4U8GL; Database = SmallBusiness;
+                Integrated Security = true";
+
         public bool Add(Customer customer)
         {
             bool isAdded = false;
             try
             {
                 //Connection
-                string connectionString = @"Server=DESKTOP-8RCCAHG; Database=SmallBusiness; Integrated Security=True";
+                
                 SqlConnection sqlConnection = new SqlConnection(connectionString);
 
                 //Command 
@@ -53,7 +56,7 @@ namespace SmallBusinessManagement.Repository
             try
             {
                 //Connection
-                string connectionString = @"Server=DESKTOP-8RCCAHG; Database=SmallBusiness; Integrated Security=True";
+             
                 SqlConnection sqlConnection = new SqlConnection(connectionString);
 
                 //Command 
@@ -89,7 +92,7 @@ namespace SmallBusinessManagement.Repository
             try
             {
                 //Connection
-                string connectionString = @"Server=DESKTOP-8RCCAHG; Database=SmallBusiness; Integrated Security=True";
+             
                 SqlConnection sqlConnection = new SqlConnection(connectionString);
 
                 //Command 
@@ -125,7 +128,7 @@ namespace SmallBusinessManagement.Repository
             try
             {
                 //Connection
-                string connectionString = @"Server=DESKTOP-8RCCAHG; Database=SmallBusiness; Integrated Security=True";
+               
                 SqlConnection sqlConnection = new SqlConnection(connectionString);
 
                 //Command 
@@ -161,7 +164,7 @@ namespace SmallBusinessManagement.Repository
             try
             {
                 //Connection
-                string connectionString = @"Server=DESKTOP-8RCCAHG; Database=SmallBusiness; Integrated Security=True";
+                
                 SqlConnection sqlConnection = new SqlConnection(connectionString);
 
                 //Command 
@@ -192,7 +195,7 @@ namespace SmallBusinessManagement.Repository
         {
 
             //Connection
-            string connectionString = @"Server=DESKTOP-8RCCAHG; Database=SmallBusiness; Integrated Security=True";
+            
             SqlConnection sqlConnection = new SqlConnection(connectionString);
 
             //Command 
@@ -219,7 +222,7 @@ namespace SmallBusinessManagement.Repository
             try
             {
                 //Connection
-                string connectionString = @"Server=DESKTOP-8RCCAHG; Database=SmallBusiness; Integrated Security=True";
+               
                 SqlConnection sqlConnection = new SqlConnection(connectionString);
 
                 //Command 
