@@ -35,15 +35,14 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.searchButton = new System.Windows.Forms.Button();
             this.showDataGridView = new System.Windows.Forms.DataGridView();
-            this.purchaseReportingViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.purchaseDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.avaialableQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salespriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.profitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purchaseReportingViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.showDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseReportingViewBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +58,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(150, 40);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
@@ -75,6 +75,7 @@
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(453, 40);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
@@ -99,7 +100,6 @@
             this.codeDataGridViewTextBoxColumn,
             this.productDataGridViewTextBoxColumn,
             this.categoryDataGridViewTextBoxColumn,
-            this.avaialableQuantityDataGridViewTextBoxColumn,
             this.cPDataGridViewTextBoxColumn,
             this.salespriceDataGridViewTextBoxColumn,
             this.profitDataGridViewTextBoxColumn});
@@ -108,10 +108,6 @@
             this.showDataGridView.Name = "showDataGridView";
             this.showDataGridView.Size = new System.Drawing.Size(747, 150);
             this.showDataGridView.TabIndex = 3;
-            // 
-            // purchaseReportingViewBindingSource
-            // 
-            this.purchaseReportingViewBindingSource.DataSource = typeof(SmallBusinessManagement.ViewModel.PurchaseReportingView);
             // 
             // purchaseDateDataGridViewTextBoxColumn
             // 
@@ -137,12 +133,6 @@
             this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
             this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
             // 
-            // avaialableQuantityDataGridViewTextBoxColumn
-            // 
-            this.avaialableQuantityDataGridViewTextBoxColumn.DataPropertyName = "AvaialableQuantity";
-            this.avaialableQuantityDataGridViewTextBoxColumn.HeaderText = "AvaialableQuantity";
-            this.avaialableQuantityDataGridViewTextBoxColumn.Name = "avaialableQuantityDataGridViewTextBoxColumn";
-            // 
             // cPDataGridViewTextBoxColumn
             // 
             this.cPDataGridViewTextBoxColumn.DataPropertyName = "CP";
@@ -160,6 +150,10 @@
             this.profitDataGridViewTextBoxColumn.DataPropertyName = "Profit";
             this.profitDataGridViewTextBoxColumn.HeaderText = "Profit";
             this.profitDataGridViewTextBoxColumn.Name = "profitDataGridViewTextBoxColumn";
+            // 
+            // purchaseReportingViewBindingSource
+            // 
+            this.purchaseReportingViewBindingSource.DataSource = typeof(SmallBusinessManagement.ViewModel.PurchaseReportingView);
             // 
             // ReportOnPurchaseUi
             // 
@@ -194,7 +188,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn avaialableQuantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn salespriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn profitDataGridViewTextBoxColumn;

@@ -52,5 +52,10 @@ namespace SmallBusinessManagement
             SalesReportingView salerepot = new SalesReportingView();
             showDataGridView.DataSource = _reportOnSalesManager.Display(salerepot);
         }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

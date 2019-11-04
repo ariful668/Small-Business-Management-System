@@ -88,6 +88,7 @@
             // 
             // endDateTimePicker
             // 
+            this.endDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.endDateTimePicker.Location = new System.Drawing.Point(436, 78);
             this.endDateTimePicker.Name = "endDateTimePicker";
             this.endDateTimePicker.Size = new System.Drawing.Size(200, 20);
@@ -104,6 +105,7 @@
             // 
             // startDateTimePicker
             // 
+            this.startDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.startDateTimePicker.Location = new System.Drawing.Point(436, 38);
             this.startDateTimePicker.Name = "startDateTimePicker";
             this.startDateTimePicker.Size = new System.Drawing.Size(200, 20);

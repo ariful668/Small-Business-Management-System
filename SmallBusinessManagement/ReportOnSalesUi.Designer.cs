@@ -35,7 +35,6 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.searchButton = new System.Windows.Forms.Button();
             this.showDataGridView = new System.Windows.Forms.DataGridView();
-            this.salesReportingViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salesDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +43,7 @@
             this.cPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salespriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.profitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salesReportingViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.showDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesReportingViewBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -68,17 +68,22 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(124, 56);
             this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 1;
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(433, 56);
             this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 1;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // searchButton
             // 
@@ -108,10 +113,6 @@
             this.showDataGridView.Name = "showDataGridView";
             this.showDataGridView.Size = new System.Drawing.Size(509, 189);
             this.showDataGridView.TabIndex = 3;
-            // 
-            // salesReportingViewBindingSource
-            // 
-            this.salesReportingViewBindingSource.DataSource = typeof(SmallBusinessManagement.ViewModel.SalesReportingView);
             // 
             // salesDateDataGridViewTextBoxColumn
             // 
@@ -160,6 +161,10 @@
             this.profitDataGridViewTextBoxColumn.DataPropertyName = "Profit";
             this.profitDataGridViewTextBoxColumn.HeaderText = "Profit";
             this.profitDataGridViewTextBoxColumn.Name = "profitDataGridViewTextBoxColumn";
+            // 
+            // salesReportingViewBindingSource
+            // 
+            this.salesReportingViewBindingSource.DataSource = typeof(SmallBusinessManagement.ViewModel.SalesReportingView);
             // 
             // ReportOnSalesUi
             // 
